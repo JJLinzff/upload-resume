@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Resume</title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Left Section - Text and Illustration -->
+    <div class="left-section">
+      <div class="content">
+        <h1 class="title">Finish!</h1>
+        <h2 class="subtitle">Upload Your Resume</h2>
+        <p class="description">Upload your resume, the platform will help you parse and optimize, you can also skip this step</p>
+        
+        <div class="illustration">
+          <img src="./logo.png" alt="illustration">
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Section - Upload Form -->
+    <div class="right-section">
+      <div class="upload-card">
+        <h3 class="card-title">Upload file</h3>
+        
+        <div class="upload-area" id="uploadArea">
+          <div class="upload-icon">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-cloud-upload"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 18a4.6 4.4 0 0 1 0 -9a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7h-1" /><path d="M9 15l3 -3l3 3" /><path d="M12 12l0 9" /></svg>
+          </div>
+          <p class="upload-text">Drag your resume file to this area, or click on the area to select the appropriate file to upload</p>
+          <input type="file" id="fileInput" accept=".pdf,.doc,.docx,.txt" style="display: none;">
+        </div>
+        
+        <div class="file-info" id="fileInfo" style="display: none;">
+          <div class="file-item">
+            <div class="file-icon">📄</div>
+            <div class="file-details">
+              <span class="file-name" id="fileName"></span>
+              <span class="file-size" id="fileSize"></span>
+            </div>
+            <button class="remove-btn" id="removeBtn">×</button>
+          </div>
+        </div>
+        
+        <div class="actions">
+          <button class="btn btn-secondary" id="lastStepBtn" disabled>Last step</button>
+          <button class="btn btn-primary" id="finishBtn">Finish</button>
+        </div>
+        
+        <div class="progress-stepper">
+          <div class="step completed">
+            <div class="step-icon"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-check"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l5 5l10 -10" /></svg></div>
+          </div>
+          <div class="step completed">
+            <div class="step-icon"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-check"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l5 5l10 -10" /></svg></div>
+          </div>
+          <div class="step active">
+            <div class="step-icon">3</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
